@@ -25,7 +25,7 @@ export default function Register() {
                 type="text"
                 className="form-control rounded-pill px-3"
                 id="name"
-                placeholder="Siddaram"
+                placeholder="Frist_Name"
               />
             </div>
 
