@@ -1,6 +1,14 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 
 export default function Login() {
+  const navigate = useNavigate();
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    navigate("/expense");
+  };
+
   return (
     <div className="d-flex align-items-center justify-content-center min-vh-100 bg-light">
       <div
@@ -9,7 +17,7 @@ export default function Login() {
       >
         <div className="card-body">
           <h3 className="card-title text-center mb-4">Login</h3>
-          <form>
+          <form onSubmit={handleSubmit}>
             <div className="mb-3">
               <label htmlFor="email" className="form-label">
                 Email address

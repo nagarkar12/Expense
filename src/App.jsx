@@ -6,6 +6,7 @@ import Register from "./Components/Pages/Register";
 import Login from "./Components/Pages/Login";
 import Expense from "./Components/Pages/Expense";
 import Navbar from "./Components/Navbar";
+import { Routes, Route } from "react-router-dom";
 
 function App() {
   const [count, setCount] = useState(0);
@@ -13,9 +14,11 @@ function App() {
   return (
     <>
       <Navbar />
-      <Register />
-      <Login />
-      <Expense />
+      <Routes>
+        <Route path="/" element={<Register />} />
+        <Route path="/login" element={<Login />} />
+        <Route path="/expense" element={<Expense />} />
+      </Routes>
     </>
   );
 }
